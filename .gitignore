@@ -1,0 +1,8 @@
+*.babelrc
+myself/.editorconfig
+myself/.gitignore
+myself/static/.gitkeep
+myself/.postcssrc.js
+myself/build/
+myself/config/dev.env.js
+myself/config/
