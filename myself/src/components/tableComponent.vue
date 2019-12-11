@@ -1,11 +1,29 @@
 <template>
-    <table :style="{'width':wid,'height':heig,'color':col,'font':fo,'table-border':table_bor}">
-        <slot name="tr"></slot>
+    <table>
+        <slot name="name">
+        </slot>
+        <slot name="id">
+        </slot>
     </table>
 </template>
 <script>
+var tempComponents={
+    render:function(createElement){
+        var _this = this;
+        return createElement(
+            "table",
+            [
+                _this.$slots.name,
+                _this.$slots.id
+            ]
+        );
+    }
+}
 export default {
-    // name:"table-component",
+    name:"table-component",
+    components:{
+        tempComponents
+    }
     // data(){
     //     return {
     //         wid:this.width,
